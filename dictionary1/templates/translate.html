@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    {% extends 'base.html' %}
+    {% load static %}
+    {% block content %}
+        <link rel="stylesheet" href="{% static 'css/helper.css' %}">
+        <body>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="translate_prompt">Enter text for translation:</h1>
+                        <form action='.' method='POST' id="myid" )">{% csrf_token %}
+                            {{ translate_form.as_p }}
+                            <input type='submit' value='Translate'>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <h1 class="translation">Translation:</h1>
+                        <form>
+                            <textarea disabled class="display_form" rows="15" cols="60">{{word}}</textarea>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+    </div>
+</body>
+</html>
