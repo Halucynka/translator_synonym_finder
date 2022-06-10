@@ -1,5 +1,6 @@
 # translator_synonym_finder
 Online translator for few languages and synonym finder of English words
+Writen using Python django package
 
 There are two pages:
 - Online translator for English, Polish, French, German, Spanish and Portuguese on address /
